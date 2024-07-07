@@ -33,7 +33,7 @@ export const Calendar: React.FC<CalendarProps> = ({
     const isAdditionalDay = day.monthIndex !== state.selectedMonth.monthIndex;
     const numberOfTasks = localStorage
       .getItem(JSON.stringify(day.date))
-      ?.split(",").length;
+      ?.split(",");
     return (
       <div
         key={`${day.dayNumber}-${day.monthIndex}`}
@@ -51,7 +51,9 @@ export const Calendar: React.FC<CalendarProps> = ({
         ].join(" ")}
       >
         {day.dayNumber}
-        {numberOfTasks && <Notification quantity={numberOfTasks} />}
+        {numberOfTasks && numberOfTasks?.[0] !== "[]" && (
+          <Notification quantity={numberOfTasks.length} />
+        )}
       </div>
     );
   });
