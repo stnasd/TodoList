@@ -9,6 +9,7 @@
 .modal {
   background-color: var(--background-color-calendar-header);
   min-height: 80vh;
+  max-height: 80vh;
   width: 80vw;
   padding: 24px;
   animation: appearanceModal 0.2s ease-in-out;
@@ -29,6 +30,7 @@
 }
 @media only screen and (max-width: 767px) {
   .modal {
-    min-height: 20vh;
+    min-height: 70vh;
+    max-height: 70vh;
   }
 }

@@ -1,7 +1,7 @@
 .modal__content {
   color: var(--color-text);
   width: 80vw;
-  height: 80vh;
+  height: 60vh;
   text-align: center;
 }
 .modal__task__list {
