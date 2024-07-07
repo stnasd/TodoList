@@ -105,7 +105,7 @@ input[type="text"]:focus {
 
 @media only screen and (max-width: 767px) {
   .calendar__day {
-    padding: 45px 0px;
+    padding: 25px 0px;
   }
   .modal__content__icon__checkmark {
     left: -5px;
@@ -141,6 +141,18 @@ input[type="text"]:focus {
   }
 }
 
-@media only screen and (min-width: 1440px) {
-  /* стили для больших мониторов и телевизоров */
+@media only screen and (min-height: 500px) and (max-height: 700px) {
+  .calendar__day {
+    padding: 15px 0px;
+  }
+}
+@media only screen and (min-height: 700px) and (max-height: 1000px) {
+  .calendar__day {
+    padding: 35px 0px;
+  }
+}
+@media only screen and (min-height: 1024px) {
+  .calendar__day {
+    padding: 55px 0px;
+  }
 }

@@ -12,3 +12,12 @@
   line-height: 1.1vw;
   align-items: center;
 }
+
+@media only screen and (max-width: 767px) {
+  .notification {
+    width: 2.7vw;
+    height: 2.7vh;
+    display: flex;
+    justify-content: center;
+  }
+}
