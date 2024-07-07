@@ -29,6 +29,6 @@
 }
 @media only screen and (max-width: 767px) {
   .modal {
-    min-height: 60vh;
+    min-height: 20vh;
   }
 }
