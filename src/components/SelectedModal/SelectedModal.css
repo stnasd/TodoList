@@ -1,0 +1,146 @@
+.modal__content {
+  color: var(--color-text);
+  width: 80vw;
+  height: 80vh;
+  text-align: center;
+}
+.modal__task__list {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: start;
+  position: relative;
+}
+.modal__task__list_empty {
+  margin-top: 2vh;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__task__list li {
+  position: relative;
+}
+.modal__task_name_span {
+  margin: 2.5vh 5vw 0 5vw;
+  display: block;
+  border-radius: 5px;
+  line-height: 24px;
+  font-size: 14px;
+  background-color: var(--background-color-modal-li);
+  font-weight: 600;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.complited {
+  text-decoration: line-through;
+  background-color: var(--color-placeholder);
+  color: var(--background-color-calendar);
+}
+
+.modal__content__icon__trash {
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background-image: var(--images-trash);
+}
+.modal__content__icon__checkmark {
+  position: absolute;
+  top: 3px;
+  left: 40px;
+  width: 15px;
+  height: 17px;
+  cursor: pointer;
+  background-image: var(--images-checkmark);
+}
+
+.modal__task__list p {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 14px;
+}
+.modal__buttons {
+  margin-top: 4vh;
+}
+.modal__buttons button {
+  padding: 1.5vh;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 20vw;
+  font-size: 2.4vh;
+  background-color: var(--color-additional-modal-border);
+  margin: 0 5px 10px 0;
+  color: var(--color-text);
+}
+.modal__content_input_task {
+  margin-bottom: 20px;
+}
+
+label p {
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--color-additional-modal-border);
+}
+
+@media only screen and (max-width: 767px) {
+  .calendar__day {
+    padding: 45px 0px;
+  }
+  .modal__content__icon__checkmark {
+    left: -5px;
+  }
+  .modal__content__icon__trash {
+    right: -5px;
+  }
+  .modal__buttons button {
+    padding: 1.5vh;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 20vw;
+    font-size: 1.4vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .calendar__day {
+    padding: 15px 0px;
+  }
+  .modal__content__icon__checkmark {
+    left: 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .modal__content__icon__checkmark {
+    left: 20px;
+  }
+  .calendar__day {
+    padding: 35px 0px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  /* стили для больших мониторов и телевизоров */
+}

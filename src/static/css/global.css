@@ -1,0 +1,51 @@
+.app__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background-color-app);
+  height: 100vh;
+  margin-inline: auto;
+}
+
+.date__container {
+  background-color: var(--background-color-calendar);
+  font-size: 15px;
+  color: var(--color-text);
+  border-radius: 15px;
+  padding: 5px 25px;
+  margin: 15px 0px 15px 0px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+/* button {
+  cursor: pointer;
+  font-family: inherit;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+} */
+a,
+:root {
+  /* colors */
+  --color-text: #ffffff;
+  --color-placeholder: rgba(255, 255, 255, 0.5);
+  --color-additional: #93b1ff;
+  --color-additional7: rgba(147, 177, 255, 0.7);
+  --color-additional-modal-border: #599be6;
+  --background-color-app: #d2b48c;
+  --background-color-calendar: #466483;
+  --background-color-calendar-header: #1a2534;
+  --background-color-notification: rgb(241, 55, 55);
+  --background-color-modal: rgba(70, 65, 86, 0.5);
+  --background-color-modal-li: #d2b48c;
+  /* images */
+  --images-arrow: url("../images/arrow.svg");
+  --images-trash: url("../images/trash_icon.svg");
+  --images-checkmark: url("../images/checkmark.svg");
+}

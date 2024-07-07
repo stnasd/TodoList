@@ -1,0 +1,14 @@
+.notification {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 1.1vw;
+  height: 1.1vw;
+  border-radius: 50%;
+  background-color: var(--background-color-notification);
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  line-height: 1.1vw;
+  align-items: center;
+}
