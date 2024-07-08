@@ -80,7 +80,9 @@
   cursor: pointer;
   color: var(--color-placeholder);
 }
-
+.calendar__dayOff__day {
+  background-color: var(--background-color-notification);
+}
 .calendar__pick__item {
   padding: 9px 0px;
   display: flex;

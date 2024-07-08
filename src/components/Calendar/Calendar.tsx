@@ -6,6 +6,7 @@ import { useCalendar } from "./hooks/useCalendar";
 
 import "./Calendar.css";
 import { SelectedModal } from "../SelectedModal/SelectedModal";
+import { CalendarDay } from "../CalendarDay/CalendarDay";
 
 interface CalendarProps {
   locale?: string;
@@ -30,31 +31,26 @@ export const Calendar: React.FC<CalendarProps> = ({
   const renderDays = state.calendarDays.map((day) => {
     const isToday = checkIsToday(day.date);
     const isSelectedDay = checkDateIsEqual(day.date, state.selectedDay.date);
+
     const isAdditionalDay = day.monthIndex !== state.selectedMonth.monthIndex;
-    const numberOfTasks = localStorage
-      .getItem(JSON.stringify(day.date))
-      ?.split(",");
+
+    const classes = [
+      "calendar__day",
+      isToday ? "calendar__today__item" : "",
+      isSelectedDay ? "calendar__selected__item" : "",
+      isAdditionalDay ? "calendar__additional__day" : "",
+    ].join(" ");
     return (
-      <div
-        key={`${day.dayNumber}-${day.monthIndex}`}
-        aria-hidden
-        onClick={() => {
-          setShowModal(() => true);
-          functions.setSelectedDay(day);
-          selectDate(day.date);
-        }}
-        className={[
-          "calendar__day",
-          isToday ? "calendar__today__item" : "",
-          isSelectedDay ? "calendar__selected__item" : "",
-          isAdditionalDay ? "calendar__additional__day" : "",
-        ].join(" ")}
-      >
-        {day.dayNumber}
-        {numberOfTasks && numberOfTasks?.[0] !== "[]" && (
-          <Notification quantity={numberOfTasks.length} />
-        )}
-      </div>
+      <CalendarDay
+        day={day}
+        date={day.date}
+        monthIndex={day.monthIndex}
+        dayNumber={day.dayNumber}
+        setShowModal={setShowModal}
+        functions={functions}
+        selectDate={selectDate}
+        classes={classes}
+      />
     );
   });
 
@@ -97,8 +93,10 @@ export const Calendar: React.FC<CalendarProps> = ({
         {state.mode === "days" && (
           <>
             <div className="calendar__week__names">
-              {state.weekDaysNames.map((weekDaysName) => (
-                <div key={weekDaysName.dayShort}>{weekDaysName.dayShort}</div>
+              {state.weekDaysNames.map((weekDaysName, index) => (
+                <div key={weekDaysName.dayShort + index}>
+                  {weekDaysName.dayShort}
+                </div>
               ))}
             </div>
             <div className="calendar__days">{renderDays}</div>

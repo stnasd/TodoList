@@ -12,7 +12,9 @@
   line-height: 1.1vw;
   align-items: center;
 }
-
+.notification__dayOff {
+  background-color: var(--color-additional-modal-border);
+}
 @media only screen and (max-width: 767px) {
   .notification {
     width: 2.7vw;
